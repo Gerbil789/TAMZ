@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-page>
+    </ons-page>
+  </ons-splitter-side>
+  <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+</ons-splitter>
+
+<template id="home.html">
+  <ons-page>
+    <p style="text-align: left; padding: 15px 0 0 20px;">
+        <ons-input id="url" placeholder="url" float value="https://homel.vsb.cz/~mor03/TAMZ/TAMZ22.php" style="width: 90%"></ons-input>
+    </p>
+
+    <p style="text-align: left; padding: 5px 0 0 20px ;">
+        <ons-input id="login" placeholder="login" float value="RUB0031"></ons-input>
+    </p>
+
+    <p style="text-align: left; padding: 5px 0 0 20px ;">
+      <ons-button onclick="request_code()">Request code</ons-button>
+    </p>
+  </ons-page>
+</template>
+
+<template id="code.html">
+  <ons-page>
+    <p style="text-align: left; padding: 15px 0 0 20px;">
+        <ons-input readonly id="url" placeholder="url" float style="width: 90%"></ons-input>
+    </p>
+
+    <p style="text-align: left; padding: 5px 0 0 20px ;">
+        <ons-input readonly id="login" placeholder="login" float></ons-input>
+    </p>
+
+    <p style="text-align: left; padding: 5px 0 0 20px ;">
+      <ons-input readonly id="code" placeholder="code" float style="width: 90%"></ons-input>
+    </p>
+
+    <p style="text-align: left; padding: 5px 0 0 20px ;">
+      <ons-button onclick="test_api()">Test API</ons-button>
+    </p>
+  </ons-page>
+</template>
+
+
+
+
+</body>
+</html>
